@@ -1,3 +1,5 @@
+import './InterviewerListItem.scss';
+
 export default function(props) {
   return (
     <li className="interviewers__item">
