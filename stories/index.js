@@ -100,7 +100,7 @@ storiesOf("InterviewerListItem", module)
       id={interviewer.id}
       name={interviewer.name}
       avatar={interviewer.avatar}
-      setInterviewer={action("SetInterviewer")}
+      setInterviewer={() => action("SetInterviewer")(interviewer.id)}
     />
   ))
 
