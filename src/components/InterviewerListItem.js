@@ -1,14 +1,19 @@
+import React from 'react';
 import './InterviewerListItem.scss';
+import classNames from "classnames";
 
 export default function(props) {
+  const interviewerClass = classNames("interviewers__item", {
+    "interviewers__item--selected": props.selected,
+  })
   return (
-    <li className="interviewers__item">
+    <li className={interviewerClass}>
       <img
         className="interviewers__item-image"
         src={props.avatar}
         alt={props.name}
       />
-      {props.name}
+      {props.selected && props.name}
     </li>
   )
 }
